@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Virtual Try-On Avatar</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- BabylonJS CDN -->
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<body>
+  <h1>🧍 Virtual Try-On Avatar</h1>
+
+  <!-- Avatar Gender Selection -->
+  <div id="selection">
+    <button id="maleBtn">Male</button>
+    <button id="femaleBtn">Female</button>
+  </div>
+
+  <!-- Avatar Rotation Controls -->
+  <div id="rotationControls">
+    <button id="rotateLeft">◀️ Rotate Left</button>
+    <button id="rotateRight">▶️ Rotate Right</button>
+  </div>
+
+  <!-- Placeholder for upcoming clothes section -->
+  <div id="nextSection" style="display:none;">
+    <h2>Next: Clothes Section Coming Soon</h2>
+  </div>
+
+  <!-- Canvas for BabylonJS Scene -->
+  <canvas id="renderCanvas"></canvas>
+
+  <script src="main.js"></script>
+</body>
+</html>
