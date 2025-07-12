@@ -23,9 +23,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Render loop
   engine.runRenderLoop(() => {
-    if (currentAvatar) {
-      currentAvatar.rotation.y = avatarRotationY;
-    }
+   
+   if (currentAvatar) {
+  currentAvatar.rotation.y += avatarRotationY;
+  avatarRotationY = 0;
+}
+
     scene.render();
   });
 
@@ -62,6 +65,7 @@ function loadAvatar(file) {
     currentAvatar = meshes[0];
     currentAvatar.position = BABYLON.Vector3.Zero();
     currentAvatar.scaling = new BABYLON.Vector3(1, 1, 1);
+    currentAvatar.rotation = new BABYLON.Vector3(0, 0, 0); // face camera
     avatarRotationY = 0;
 
     document.getElementById("nextSection").style.display = "block";
